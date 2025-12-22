@@ -1,8 +1,8 @@
 FROM eclipse-temurin:25-jre-alpine
 
-COPY ./tools/cats/cats.jar /app/cats.jar
-COPY ./tools/cats/entrypoint.sh /app/entrypoint.sh
+COPY ./tools/cats/cats.jar /app/app.jar
+COPY ./tools/cats/entrypoint.sh /entrypoint.sh
 
-WORKDIR /app
+RUN chmod +x /entrypoint.sh
 
-ENTRYPOINT ["entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]

@@ -1,11 +1,14 @@
 #!/bin/sh
+set -e
+
+ls /specifications
 
 while true; do
-    java -jar /cats.jar \
-        --contract "/specifications/${API}-openapi.json" \
-        --server "http://${HOST}:${PORT}" \
-        -b -k \
-        --includeEmojis \
-        --includeControlChars \
-        --includeWhitespaces
+    java -jar /app/app.jar \
+    --contract "/specifications/${API}-openapi.json" \
+    --server "http://${HOST}:${PORT}" \
+    -b -k \
+    --includeEmojis \
+    --includeControlChars \
+    --includeWhitespaces
 done
