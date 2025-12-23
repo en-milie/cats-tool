@@ -10,5 +10,5 @@ while true; do
     -b -k \
     --includeEmojis \
     --includeControlChars \
-    --includeWhitespaces
+    --includeWhitespaces || true
 done
