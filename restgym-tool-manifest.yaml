@@ -1,20 +1,22 @@
 # RESTgym tool manifest
+#
+# Static metadata about the tool, written by the tool authors. RESTgym uses it to run the tool properly.
 manifest_version: 1
 
+# Identity and metadata
 id: cats
 name: CATS
-version: "13.4.4-SNAPSHOT"        # Implementation-Version in cats.jar
-description: REST API fuzzer and negative testing tool for OpenAPI endpoints.
+version: "15.0.0"
+description: Automated black-box OpenAPI fuzzer and negative testing tool for REST APIs.
 license: Apache-2.0
 repository: https://github.com/Endava/cats
 homepage: https://endava.github.io/cats/
 authors:
   - name: Madalin Ilie
     affiliation: Endava
-    # orcid:
-# citation:                       # no associated publication found
 
+# What the tool can test
 compatibility:
-  # openapi_versions:             # not found
-  spec_formats: [json]            # entrypoint.sh reads /specifications/${API}-openapi.json
+  openapi_versions: ["2.0", "3.0", "3.1"]
+  spec_formats: [json, yaml]
   budgets: [time]
