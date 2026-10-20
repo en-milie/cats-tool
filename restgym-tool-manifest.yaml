@@ -6,7 +6,7 @@ manifest_version: 1
 # Identity and metadata
 id: cats
 name: CATS
-version: "15.0.0"
+version: "15.0.3"
 description: Automated black-box OpenAPI fuzzer and negative testing tool for REST APIs.
 license: Apache-2.0
 repository: https://github.com/Endava/cats
