@@ -20,7 +20,7 @@ When launched by RESTgym (`src/run.py`), the container receives the following en
 |----------|-------------|----------|
 | `HOST` | Hostname or IP address of the target API proxy | Yes |
 | `PORT` | TCP port of the target API proxy | Yes |
-| `API` | Identifier of the API under test (used to locate `/specifications/${API}-openapi.json` or `/specifications/${API}.yaml`) | Yes |
+| `API` | Identifier of the API under test (used to locate `/specifications/${API}-openapi.json` or `/specifications/${API}-swagger.yaml`) | Yes |
 | `TIME_BUDGET` | Testing time budget in minutes (default: `60`) | No |
 
 ## Multi-Stage Execution Strategy (`entrypoint.sh`)
