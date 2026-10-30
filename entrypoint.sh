@@ -9,7 +9,9 @@ echo "Server URL: http://${HOST}:${PORT}"
 echo "=========================="
 
 SPEC_FILE="/specifications/${API}-openapi.json"
-if [ ! -f "${SPEC_FILE}" ] && [ -f "/specifications/${API}.yaml" ]; then
+if [ ! -f "${SPEC_FILE}" ] && [ -f "/specifications/${API}-swagger.yaml" ]; then
+    SPEC_FILE="/specifications/${API}-swagger.yaml"
+elif [ ! -f "${SPEC_FILE}" ] && [ -f "/specifications/${API}.yaml" ]; then
     SPEC_FILE="/specifications/${API}.yaml"
 fi
 

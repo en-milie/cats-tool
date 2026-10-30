@@ -9,7 +9,7 @@ This directory contains all artifacts required to run [CATS](https://github.com/
 | `Dockerfile` | `Dockerfile` | Multi-arch (`linux/amd64`, `linux/arm64`) RESTgym-compliant image definition based on `eclipse-temurin:25-jre-alpine` |
 | `entrypoint.sh` | `entrypoint.sh` | Container entrypoint invoking CATS against the target API proxy |
 | `restgym-tool-manifest.yaml` | `restgym-tool-manifest.yaml` | Official RESTgym v1 tool metadata manifest |
-| `cats.jar` | `cats.jar` | Self-contained CATS 15.1.3 uber-JAR |
+| `cats.jar` | `cats.jar` | Self-contained CATS 15.3.0 uber-JAR |
 | `README.md` | `README.md` | Setup and execution documentation |
 
 ## RESTgym Environment Contract
@@ -20,7 +20,7 @@ When launched by RESTgym (`src/run.py`), the container receives the following en
 |----------|-------------|----------|
 | `HOST` | Hostname or IP address of the target API proxy | Yes |
 | `PORT` | TCP port of the target API proxy | Yes |
-| `API` | Identifier of the API under test (used to locate `/specifications/${API}-openapi.json` or `/specifications/${API}.yaml`) | Yes |
+| `API` | Identifier of the API under test (used to locate `/specifications/${API}-openapi.json` or `/specifications/${API}-swagger.yaml`) | Yes |
 | `TIME_BUDGET` | Testing time budget in minutes (default: `60`) | No |
 
 ## Building and Testing in RESTgym
